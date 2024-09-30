@@ -34,6 +34,9 @@ class BookListViewTest(APITestCase):
         self.assertEqual(response.data['name'],self.data['name'])
         self.assertEqual(response.data['author_name', self.data['author_name']])
 
+    def test2():
+        pass
+
 
 class BookDetailViewTests(APITestCase):
 
