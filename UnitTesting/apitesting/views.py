@@ -26,3 +26,7 @@ class BookListView(APIView):
         raise Response.internal_server_error(err)
 
 
+
+def test():
+    pass
+
