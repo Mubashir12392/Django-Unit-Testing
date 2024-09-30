@@ -1,11 +1,7 @@
-from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
 from django.http import JsonResponse
 from rest_framework.response import Response
 from rest_framework import status
-
-import logging
-logger = logging.getLogger('django')
 
 
 from .models import *
@@ -27,7 +23,6 @@ class BookListView(APIView):
             return JsonResponse(book.errors, status=status.HTTP_400_BAD_REQUEST)
         
     except Exception as err:
-        logger.error('error in Booklistview' + str(err))
         raise Response.internal_server_error(err)
 
 
